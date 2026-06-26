@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease-out';
-                observer.unobserve(entry.target);
+                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                entry.target.style.opacity = '1';\n                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe all cards and sections
     document.querySelectorAll('.project-card, .blog-card, .social-card, .about-card').forEach(el => {
         el.style.opacity = '0';
+        el.style.visibility = 'visible';
         observer.observe(el);
     });
 
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add smooth transitions to links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href !== '#') {
