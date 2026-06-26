@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe all project cards and blog cards
-    document.querySelectorAll('.project-card, .blog-card, .social-card').forEach(el => {
+    // Observe all cards and sections
+    document.querySelectorAll('.project-card, .blog-card, .social-card, .about-card').forEach(el => {
         el.style.opacity = '0';
         observer.observe(el);
     });
@@ -28,8 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typing animation for hero text
     const typedText = document.querySelector('.typed-text');
     if (typedText) {
-        typeText(typedText, 'whoami', 100);
+        typeText(typedText, 'whoami', 120);
     }
+
+    // Add smooth transitions to links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
 });
 
 /**
