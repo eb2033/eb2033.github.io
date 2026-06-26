@@ -14,15 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-                entry.target.style.opacity = '1';\n                observer.unobserve(entry.target);
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe all cards and sections
+    // Observe all cards and sections - DO NOT set opacity to 0
     document.querySelectorAll('.project-card, .blog-card, .social-card, .about-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.visibility = 'visible';
+        // Add a class instead to handle initial state with CSS
+        el.classList.add('card-hidden');
         observer.observe(el);
     });
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add smooth transitions to links
-    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href !== '#') {
