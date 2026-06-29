@@ -1,3 +1,5 @@
+# ----------------------WIP----------------------
+
 # Terminal Portfolio
 
 A modern portfolio website with terminal-inspired aesthetics built with vanilla JavaScript and GSAP.
