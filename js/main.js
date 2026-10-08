@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Observe all cards and sections - DO NOT set opacity to 0
-    document.querySelectorAll('.project-card, .blog-card, .social-card, .about-card').forEach(el => {
+    document.querySelectorAll('.project-card, .social-card, .about-card').forEach(el => {
         // Add a class instead to handle initial state with CSS
         el.classList.add('card-hidden');
         observer.observe(el);
