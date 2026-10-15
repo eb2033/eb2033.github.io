@@ -16,6 +16,7 @@
             <div class="nav-logo">Georgy Bodrov<span class="cursor"></span></div>
             <ul class="nav-menu">
                 <li><a href="#home">home</a></li>
+                <li><a href="#featured">featured</a></li>
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#socials">socials</a></li>
@@ -56,6 +57,51 @@
                     <p>I believe in secure architecture design and defense in depth. When a system is inevitably compromised in one way or another, the goal isn't to prevent every intrusion—it's to ensure that compromise is detected quickly, contained effectively, and recoverable without catastrophe. Security isn't a wall you build once; it's a posture you maintain: layered controls, strong visibility, and the assumption that any single control can fail.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section id="featured" class="featured">
+            <h2 class="section-title"><span class="prompt">></span> featured</h2>
+            <article class="featured-window">
+                <div class="window-bar">
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-dot"></span>
+                    <span class="window-path">~/projects/pyrogue</span>
+                </div>
+                <div class="featured-body">
+                    <h3 class="featured-title"><span class="prompt">$</span> pyrogue</h3>
+                    <p class="featured-description">A turn-based roguelike dungeon crawler built in Python as an experiment in what I can create with AI and multi-agent workflows. It has procedurally generated floors, line of sight, two playable classes, loot in four rarities and a boss every eighth floor, all drawn with pixel-art tiles in its own window. CI lints, type-checks and tests every push, and builds downloads for Windows and Linux.</p>
+                    <div class="card-meta">
+                        <span class="tag">Python</span>
+                        <span class="tag">pygame-ce</span>
+                        <span class="tag">GitHub Actions</span>
+                        <span class="tag">Claude Code</span>
+                    </div>
+
+                    <!-- Swap each placeholder span for <img src="assets/pyrogue/..." alt="..."> -->
+                    <div class="featured-gallery">
+                        <figure class="featured-shot featured-shot-main">
+                            <span class="shot-placeholder">screenshot: dungeon view</span>
+                        </figure>
+                        <figure class="featured-shot">
+                            <span class="shot-placeholder">screenshot: combat</span>
+                        </figure>
+                        <figure class="featured-shot">
+                            <span class="shot-placeholder">screenshot: inventory</span>
+                        </figure>
+                    </div>
+
+                    <div class="featured-links">
+                        <a class="featured-button primary" href="https://github.com/eb2033/PyRogue" target="_blank" rel="noopener noreferrer">
+                            <span class="prompt">$</span> ./demo
+                        </a>
+                        <a class="featured-button" href="https://github.com/eb2033/PyRogue" target="_blank" rel="noopener noreferrer">
+                            <span class="prompt">$</span> git clone
+                        </a>
+                    </div>
+                </div>
+            </article>
         </section>
 
         <!-- Projects Section -->
@@ -103,20 +149,6 @@
                             <span class="tag">Python</span>
                             <span class="tag">Nmap</span>
                             <span class="tag">Linux</span>
-                        </div>
-                    </div>
-                </a>
-
-                <a class="project-card" href="https://github.com/eb2033/PyRogue" target="_blank" rel="noopener noreferrer">
-                    <div class="card-header">
-                        <span class="prompt">$</span> pyrogue
-                    </div>
-                    <div class="card-content">
-                        <p>A roguelike dungeon crawler that runs in the terminal. It has procedural dungeon generation, field of view, monsters, items and save games. Curses and tcod rendering backends can be swapped behind a common interface, and the game logic has its own test suite.</p>
-                        <div class="card-meta">
-                            <span class="tag">Python</span>
-                            <span class="tag">curses</span>
-                            <span class="tag">tcod</span>
                         </div>
                     </div>
                 </a>

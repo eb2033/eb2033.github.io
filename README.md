@@ -7,6 +7,7 @@ Personal portfolio site of Georgy Bodrov, hosted on GitHub Pages. It is a single
 - **Navbar**: a sticky bar with the name, a blinking cursor and links to each section.
 - **Home**: a `$ whoami` header that types itself out on load, followed by a subtitle and a short introduction.
 - **About**: three cards covering background, skills and technologies, and security philosophy.
+- **Featured**: one highlighted project (currently PyRogue) in a terminal-window frame, with a title, description, tech tags, a screenshot gallery and demo/source links.
 - **Projects**: a grid of cards, one per GitHub repository, each with a description and tech tags. Each card links to its repo.
 - **Connect**: links to GitHub, LinkedIn and email.
 - **Footer**: a one-line `echo` sign-off.
